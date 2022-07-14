@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="567.0" prefWidth="660.0" style="-fx-background-color: #ffe;" xmlns="http://javafx.com/javafx/8.0.261" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.summary">
+   <children>
+      <TextArea editable="false" layoutX="51.0" layoutY="126.0" nodeOrientation="LEFT_TO_RIGHT" pickOnBounds="false" prefHeight="340.0" prefWidth="557.0" style="-fx-background-color: white;" text="&#10;                           &#10;&#10;The reason we need CPU Scheduling is that it’s the ground on which the concept of&#10; multiprogramming is built on. Any process involves both CPU time and I/O time, however, while&#10; a process is involved in doing I/O events, the CPU remains idle which in turn decreases &#10;the overall CPU utilization. Hence, to increase the utilization of the CPU, CPU scheduling &#10;solves this problem by decreasing the time in which the CPU remains idle by using algorithms &#10;such as Round Robin, Shortest-remaining time first, Shortest job first, Priority scheduling&#10; without preemption and First come first served and so on and so forth. Thus, this project&#10; aims to use a generated set of processes and implement the various CPU scheduling&#10; algorithms whilst providing the user with an interface that makes it as easy as possible to&#10; be able to visualize what each algorithm does." AnchorPane.leftAnchor="51.0" AnchorPane.rightAnchor="51.66666666666663">
+         <font>
+            <Font name="Goudy Old Style Italic" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor>
+         <effect>
+            <InnerShadow choke="0.33" color="#8e865a" />
+         </effect>
+      </TextArea>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="216.0" layoutY="45.0" prefHeight="59.0" prefWidth="231.0" text="Summary" textFill="#c1307b">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="43.0" />
+         </font>
+      </Label>
+      <Button fx:id="back" layoutX="112.0" layoutY="504.0" mnemonicParsing="false" onAction="#back" prefHeight="31.0" prefWidth="81.0" text="Back">
+         <font>
+            <Font name="Cooper Black" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="exit" layoutX="472.0" layoutY="504.0" mnemonicParsing="false" onAction="#exit" prefHeight="31.0" prefWidth="81.0" text="Exit">
+         <font>
+            <Font name="Cooper Black" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

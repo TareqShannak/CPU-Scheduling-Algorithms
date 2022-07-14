@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="588.0" prefWidth="955.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.261" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.home_page">
+   <children>
+      <AnchorPane layoutX="515.0" layoutY="35.0" opacity="0.64" prefHeight="518.0" prefWidth="415.0" style="-fx-background-color: #0e79af; -fx-background-color: #faebef; -fx-background-radius: 10;" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="515.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="35.0">
+         <children>
+            <Label fx:id="incomplete" alignment="CENTER" layoutX="91.0" layoutY="362.0" prefHeight="23.0" prefWidth="267.0" text="Incompleted/Wrong Information !" textAlignment="CENTER" textFill="#dd001d" visible="false" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="simulation" layoutX="72.0" layoutY="308.0" mnemonicParsing="false" onAction="#switch_Scenes" opacity="0.93" prefHeight="47.0" prefWidth="221.0" style="-fx-background-radius: 15;" text="Start Simulation" textFill="#1e0340" AnchorPane.bottomAnchor="162.66666666666663" AnchorPane.leftAnchor="72.0" AnchorPane.rightAnchor="75.66656494140636" AnchorPane.topAnchor="308.0">
+               <font>
+                  <Font name="Bookman Old Style Bold Italic" size="20.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+            <Text fill="#97046b" layoutX="32.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Scheduling " textAlignment="CENTER" wrappingWidth="166.66658528645848" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="216.33341471354152" AnchorPane.topAnchor="39.734375">
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="32.0" />
+               </font>
+            </Text>
+            <ComboBox fx:id="choice_box" layoutX="210.0" layoutY="208.0" onAction="#Select" prefHeight="36.0" prefWidth="182.0" promptText="Select One" style="-fx-background-radius: 10;" AnchorPane.leftAnchor="185.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="208.0">
+               <effect>
+                  <InnerShadow />
+               </effect></ComboBox>
+            <TextField fx:id="text_q" accessibleRole="TEXT" layoutX="209.0" layoutY="262.0" prefHeight="30.0" prefWidth="137.0" promptText="Enter Time Quantum" visible="false" AnchorPane.leftAnchor="185.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="262.0">
+               <font>
+                  <Font size="11.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </TextField>
+            <Label fx:id="l_q" layoutX="99.0" layoutY="259.0" onDragDetected="#Select" prefHeight="36.0" prefWidth="93.0" text="Quantum:" textFill="#090330" visible="false" AnchorPane.rightAnchor="230.0">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="71.0" layoutY="208.0" prefHeight="36.0" prefWidth="103.0" text="Algorithm:" textFill="#090330" AnchorPane.leftAnchor="61.0">
+               <font>
+                  <Font name="Comic Sans MS Italic" size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="reset" layoutX="42.0" layoutY="424.0" mnemonicParsing="false" onAction="#reset" prefHeight="29.0" prefWidth="93.0" style="-fx-background-color: #416a80; -fx-background-radius: 10;" text="Reset" textFill="#f76969" AnchorPane.leftAnchor="42.0">
+               <font>
+                  <Font name="Bauhaus 93" size="17.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+            <Button fx:id="exit" layoutX="286.0" layoutY="424.0" mnemonicParsing="false" onAction="#exit" prefHeight="29.0" prefWidth="93.0" style="-fx-background-color: #416a80; -fx-background-radius: 10;" text="Exit" textFill="#ff6767" AnchorPane.rightAnchor="55.666666666666686">
+               <font>
+                  <Font name="Bauhaus 93" size="17.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+            <Label layoutX="81.0" layoutY="150.0" prefHeight="36.0" prefWidth="201.0" text="Number Of Process:" textFill="#090330" AnchorPane.leftAnchor="61.0" AnchorPane.rightAnchor="100.0">
+               <font>
+                  <Font name="Comic Sans MS Italic" size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nop_" alignment="CENTER" layoutX="281.0" layoutY="150.0" prefHeight="36.0" prefWidth="79.0" promptText="NOP" style="-fx-background-radius: 7;" AnchorPane.leftAnchor="255.0" AnchorPane.rightAnchor="70.0">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </TextField>
+            <Label layoutX="206.0" layoutY="39.0" prefHeight="46.0" prefWidth="192.0" text="Algorithms" textFill="#2c0a71" AnchorPane.leftAnchor="206.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="39.0">
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="32.0" />
+               </font>
+            </Label>
+            <Label fx:id="cantRead" alignment="CENTER" layoutX="91.0" layoutY="372.0" prefHeight="23.0" prefWidth="267.0" text="Can't Read The File Correctly !" textAlignment="CENTER" textFill="#dd001d" visible="false" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </AnchorPane>
+      <ImageView fitHeight="792.0" fitWidth="495.0" layoutY="-128.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-81.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="-128.0">
+         <image>
+            <Image url="@../os_img/cpu2_img.jpg" />
+         </image>
+         <viewport>
+            <Rectangle2D minX="5.0" minY="5.0" />
+         </viewport>
+         <effect>
+            <InnerShadow height="42.74" radius="36.1925" width="104.03" />
+         </effect>
+      </ImageView>
+      <Line endX="484.4624938964844" endY="-1.0" layoutX="5.0" layoutY="1.0" startX="484.4624938964844" startY="583.4644775390625" stroke="#1e1c1c" strokeWidth="5.0">
+         <effect>
+            <BoxBlur />
+         </effect>
+      </Line>
+   </children>
+   <effect>
+      <InnerShadow choke="0.05" radius="43.2975" width="154.19" />
+   </effect>
+</AnchorPane>
